@@ -1,0 +1,43 @@
+
+
+
+//footer
+
+footer {
+  background: url(../assets/277H.jpg) center center;
+  background-size: cover;
+
+  .lockup{
+    padding: 50px;
+    padding-bottom: 80px;
+    clear: both;
+
+    .logo {
+      color: white;
+      width: 50px;
+      height: 50px;
+      float: left;
+      margin-right: 30px;
+    }
+
+    .content-wrap {
+      float: left;
+
+      a {
+        @extend %small-bold;
+        color: rgba(0,0,0,0.5);
+        display: inline-block;
+        margin-right: 30px;
+        &:hover {
+          color: rgba(0,0,0,0.7);
+        }
+      }
+
+      .copywrite {
+        color: rgba(0,0,0,0.4);
+        margin: 0;
+        @extend %small-bold;
+      }
+    }
+  }
+}
