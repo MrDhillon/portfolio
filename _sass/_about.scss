@@ -72,8 +72,10 @@
   max-width: 540px;
   margin: 100px auto;
   color: #999;
-  clear: both;
   padding-left: 100px;
+  clear: both;
+  content: "";
+  display: table;
 
   .skill-unit {
     width: 270px;
@@ -114,5 +116,8 @@
 @media screen and (max-width: 541px) {
   .skill-lockup {
     width: 270px;
+    .skill-unit {
+      width: 220px;
+    }
   }
 }
