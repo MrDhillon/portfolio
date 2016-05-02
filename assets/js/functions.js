@@ -1,5 +1,6 @@
 $(function(){
   smoothScrool(300);
+  workSlide();
 });
 
 function smoothScrool(duration){
@@ -14,5 +15,16 @@ function smoothScrool(duration){
       },duration);
     }
 
+  });
+}
+
+function workSlide() {
+  $(".thumb-unit").on("click",function(){
+    $(".work-slider").css("left","-100%");
+    $(".work-container").show();
+  });
+  $(".work-return").on("click",function(){
+    $(".work-slider").css("left","0%");
+    $(".work-container").hide(400);
   });
 }
