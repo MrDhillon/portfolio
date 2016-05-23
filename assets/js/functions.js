@@ -1,6 +1,7 @@
 $(function(){
   smoothScrool(300);
   workSlide();
+  workLoad();
 });
 
 function smoothScrool(duration){
@@ -27,4 +28,20 @@ function workSlide() {
     $(".work-slider").css("left","0%");
     $(".work-container").hide(400);
   });
+}
+
+function workLoad(){
+  $.ajaxSetup({cache: true});
+
+  $(".thumb-unit").on("click",function(){
+
+    var $this = $(this),
+        newTitle = $this.find("strong").text(),
+        spinner = '<div class="loader">Loading...</div>',
+        newHtml = "/work/site_"+$this.data("work")+".html";
+
+    $(".project-load").html(spinner).load(newHtml);
+    $(".project-title").html(newTitle);
+  });
+
 }
