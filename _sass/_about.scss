@@ -20,6 +20,7 @@
     height: 100px;
     background-color: $bgcolor;
     border-radius: 50%;
+    transition: 0.2s;
     svg {
       fill: $accent-color;
     }
@@ -35,6 +36,10 @@
     }
     &.icon-video {
       order: 5
+    }
+
+    &:hover {
+      transform: scale(1.3);
     }
   }
 

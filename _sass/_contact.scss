@@ -1,0 +1,54 @@
+.contact {
+  text-align: center;
+  margin-bottom: 50px;
+
+  .social-links {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    a {
+      display: block;
+      background: $accent-color;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      color: white;
+      border-radius: 50%;
+      font-size: 28px;
+      text-decoration: none;
+      transition: 0.1s;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+
+    }
+
+  }
+
+  .bar {
+    width: 250px;
+    height: 0px;
+    border-top: 5px solid $accent-color;
+    margin: 0px auto 50px;
+  }
+
+  .big-link {
+    display: inline-block;
+    font-size: 72px;
+    font-weight: 300;
+    color: $accent-color;
+
+    @media (max-width: 640px) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      	opacity: 0.5;
+    }
+  }
+}

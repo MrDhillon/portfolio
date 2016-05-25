@@ -1,30 +1,31 @@
 
-
 //header
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 header{
-  height: 450px;
-  background: bottom center;
+  background: top center;
   background-size: cover;
-
+  padding-bottom: 50px;
   .logo {
-    height: 50px;
-    width: 50px;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: white;
     margin-left: 30px;
     margin-top: 10px;
-    background: #999;
     float: left;
   }
 
   nav {
     float: right;
-    margin: 30px 30px 0 0;
+    padding: 30px 30px 0 0;
     a {
       display: inline-block;
       margin-left: 20px;
-      color: rgba(0,0,0,0.7);
       @extend %small-bold;
+      transition: 0.1s;
       &:hover {
         color: rgba(0,0,0,1);
+        transform: scale(1.1);
+        text-decoration: none;
       }
     }
   }
@@ -40,7 +41,7 @@ header{
     clear: both;
     padding-top: 100px;
 
-    span {
+    .perimeter {
       display: inline-block;
       padding: 0.5em;
       border: white solid 10px;
@@ -53,4 +54,41 @@ header{
     color: white;
     line-height: 1px;
   }
+
+}
+@media (max-width: 640px) {
+  header {
+    .logo {
+      margin-left: 40%;
+    }
+    nav {
+      float: none;
+      text-align: center;
+      padding-top: 80px;
+    }
+    h1 {
+      padding-top: 20px;
+    }
+  }
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
